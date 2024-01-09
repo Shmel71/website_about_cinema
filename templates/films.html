@@ -1,0 +1,20 @@
+{% extends 'base_template.html' %}
+
+{% block title %}Библиотека фильмов{% endblock %}
+
+{% block content %}
+    <div id="films">
+        {% for f in films %}
+            <a href="/films/{{ f.id }}">
+            <div class="film_info_content">
+                <div class="film_logo">
+                    <img src="{{ f.link_to_logo }}" alt="logo">
+                </div>
+            <div class="film_info">
+                <h2>{{ f.film_name }}</h2>
+            </div>
+            </div>
+        {% endfor %}
+            </a>
+    </div>
+{% endblock %}

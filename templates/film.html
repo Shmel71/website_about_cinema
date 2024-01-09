@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+
+{% block title %}{{ film.film_name }}{% endblock %}
+
+{% block content %}
+    <div class="film_header">
+        <div class="film_logo">
+            <img src="{{ film.link_to_logo }}" alt="logo">
+            <video width="850" height="500"  autoplay src="{{ film.link_to_video }}" controls></video>
+        </div>
+
+        <div class="film_info">
+            <h2>{{ film.film_name }}</h2>
+            <p>{{ film.description }}</p>
+        </div>
+
+    </div>
+{% endblock %}
